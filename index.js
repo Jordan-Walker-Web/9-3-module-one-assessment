@@ -28,7 +28,10 @@ const exampleMovies = require("./movies");
       "James and the Giant Peach",
     ];
  */
-function getAllMovieTitles() {}
+function getAllMovieTitles(movies) {
+ 
+ 
+}
 
 /**
  * getHighestMetascore()
@@ -41,7 +44,14 @@ function getAllMovieTitles() {}
  *  getHighestMetascore(movies);
  *  //> 96
  */
-function getHighestMetascore() {}
+function getHighestMetascore(movies) {
+  let highest = []
+  for(let i = 0; i < movies.length; i++){
+    if (highest < movies[i].metascore){
+      highest = movies[i].metascore
+    }
+  } return highest
+}
 
 /**
  * getAverageIMDBRating()
@@ -83,8 +93,16 @@ function countByRating() {}
       // Toy Story 4
     };
  */
-function findById() {}
-
+function findById(movies) {
+  
+  let ID = {}
+for( let i = 1; i < movies.length; i++){
+    if(ID === movies[i].imdbID){
+      return movies
+   }
+  }
+  return ID
+}
 /**
  * filterByGenre()
  * -----------------------------
